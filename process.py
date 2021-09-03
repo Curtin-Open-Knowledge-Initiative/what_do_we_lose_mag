@@ -23,14 +23,14 @@ import numpy as np
 import plotly.graph_objects as go
 from typing import Optional, Callable, Union
 
-from mag_report.report_graphs.plotly_table import PlotlyTable
 from observatory.reports import report_utils
 from precipy.analytics_function import AnalyticsFunction
 from report_data_processing.sql import (
     doi_table_categories_query, mag_table_categories_query
 )
 from report_graphs import (
-    Alluvial, OverallCoverage, BarLine, ValueAddBar, ValueAddByCrossrefType, ValueAddByCrossrefTypeHorizontal
+    Alluvial, OverallCoverage, BarLine, ValueAddBar, ValueAddByCrossrefType, ValueAddByCrossrefTypeHorizontal,
+    PlotlyTable
 )
 
 PROJECT_ID = 'utrecht-university'
@@ -326,21 +326,22 @@ def mag_coverage_by_cr_type(af: AnalyticsFunction):
     figdata.reset_index(inplace=True)
 
     chart = ValueAddByCrossrefTypeHorizontal(df=figdata,
-                                   categories=['in MAG with Document Type',
-                                               'in MAG without Document Type',
-                                               'Not in MAG'],
-                                   metadata_element='dummy',
-                                   ys={'in MAG with Document Type': {'dummy': 'pc_mag_with_type'},
-                                       'in MAG without Document Type': {'dummy': 'pc_mag_without_type'},
-                                       'Not in MAG': {'dummy': 'pc_not_in_mag'}
-                                       }
-                                   )
+                                             categories=['in MAG with Document Type',
+                                                         'in MAG without Document Type',
+                                                         'Not in MAG'],
+                                             metadata_element='dummy',
+                                             ys={'in MAG with Document Type': {'dummy': 'pc_mag_with_type'},
+                                                 'in MAG without Document Type': {'dummy': 'pc_mag_without_type'},
+                                                 'Not in MAG': {'dummy': 'pc_not_in_mag'}
+                                                 }
+                                             )
 
     # Modify the bar colors here
     fig = chart.plotly(palette=['#F6671E', '#FAA77C', '#CCCCCC'])
     fig.write_image('mag_coverage_by_crossref_type.png')
     af.add_existing_file('mag_coverage_by_crossref_type.png')
     write_plotly_div(af, fig, 'mag_coverage_by_crossref_type.html')
+
 
 def alluvial_graph(af: AnalyticsFunction):
     cr_data = load_cache_data(af,
@@ -404,6 +405,7 @@ def alluvial_graph(af: AnalyticsFunction):
     af.add_existing_file('alluvial_current.png')
     write_plotly_div(af, fig, 'alluvial_current.html')
 
+
 def calculate_overall_coverage(mag_data: pd.DataFrame,
                                cr_data: pd.DataFrame) -> dict:
     cr_total = cr_data.num_dois.sum()
@@ -425,6 +427,7 @@ def calculate_overall_coverage(mag_data: pd.DataFrame,
         cr_not_in_mag=cr_total - cr_in_mag,
         cr_total=cr_total
     )
+
 
 def overall_comparison(af: AnalyticsFunction):
     cr_data = load_cache_data(af,
@@ -470,6 +473,7 @@ def overall_comparison(af: AnalyticsFunction):
     fig.write_image('current_coverage.png')
     af.add_existing_file('current_coverage.png')
     write_plotly_div(af, fig, 'current_coverage.html')
+
 
 def mag_in_crossref_by_pubdate(af):
     cr_data = load_cache_data(af,
