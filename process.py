@@ -129,7 +129,7 @@ def value_add_tables_graphs(af: AnalyticsFunction):
     sum_all = cr_data.sum(axis=0)
     sum_2020 = cr_data[cr_data.published_year == 2020].sum(axis=0)
     sum_current = cr_data[cr_data.published_year.isin(CURRENT)].sum(axis=0)
-    sum_lastdecade = cr_data[cr_data.published_year.isin(LAST_DECADE)].sum(axis=0)
+    # sum_lastdecade = cr_data[cr_data.published_year.isin(LAST_DECADE)].sum(axis=0)
 
     cols = ['dois_with_cr_affiliation_strings',
             'dois_with_cr_orcid',
