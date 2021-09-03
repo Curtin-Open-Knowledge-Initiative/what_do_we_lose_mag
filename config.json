@@ -1,0 +1,62 @@
+{
+  "cache_bucket_name": "output_cache",
+  "output_bucket_name": "output_files",
+  "logfile": "logs/precipy.log",
+  "loglevel": "DEBUG",
+  "constants": {
+    "PROJECT_ID": "utrecht-university",
+    "YEAR_RANGE": [1980,2026]
+  },
+  "ranges": {
+  },
+  "analytics": [
+    [
+      "get_doi_table_data",
+      {
+      }
+    ],
+    [
+      "get_mag_table_data",
+      {
+      }
+    ],
+    [
+      "value_add_tables_graphs",
+      {
+        "depends": ["get_doi_table_data"]
+      }
+    ],
+    [
+      "alluvial_graph",
+      {
+        "depends": ["get_doi_table_data"]
+      }
+    ],
+    [
+      "mag_coverage_by_cr_type",
+      {
+        "depends": ["get_doi_table_data"]
+      }
+    ],
+    [
+      "overall_comparison",
+      {
+        "depends": ["get_doi_table_data", "get_mag_table_data"]
+      }
+    ]
+    ,
+    [
+      "mag_in_crossref_by_pubdate",
+      {
+        "depends": ["get_doi_table_data", "get_mag_table_data"]
+      }
+    ]
+  ],
+  "templates": [
+    "report_template.md"
+  ],
+  "filters": [
+    ["markdown", "html"],
+    ["xhtml2pdf", "pdf"]
+  ]
+}
