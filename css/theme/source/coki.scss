@@ -1,0 +1,193 @@
+/**
+ * A simple theme for reveal.js presentations, similar
+ * to the default theme. The accent color is darkblue.
+ *
+ * This theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+
+// Include theme-specific fonts
+@import url("https://use.typekit.net/ntm8idr.css");
+
+
+// Override theme settings (see ../template/settings.scss)
+$mainFont: "brandon-grotesque", sans-serif;
+$mainColor: #000;
+$headingFont: "brandon-grotesque", sans-serif;
+$headingColor: #000;
+$headingTextShadow: none;
+$headingTextTransform: none;
+$backgroundColor: #fff;
+$linkColor: #00008B;
+$linkColorHover: lighten( $linkColor, 20% );
+$selectionBackgroundColor: rgba(0, 0, 0, 0.99);
+
+// Change text colors against dark slide backgrounds
+@include dark-bg-text-color(#fff);
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+
+.reveal {
+  font-family: brandon-grotesque, sans-serif;
+  font-size: 16pt;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 140%;
+  color: black;
+  text-align: left;
+ }
+
+.reveal div.slides {
+    position: absolute;
+    top: -5%;
+    margin: 55px;
+    text-align: left;}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6
+
+.reveal h1 {
+  text-transform: uppercase;
+  font-size:1.5em;
+  font-weight: 900;
+  font-style: normal;
+  color: #F26E3B;
+  margin: 0;
+  padding-top: 0pt;
+  line-height: 120%;
+  text-align: left;
+}
+.reveal h2 {
+  text-transform: uppercase;
+  font-size:1.5em;
+  font-weight: 300;
+  font-style: normal;
+  color: #F26E3B;
+  margin: 0;
+  padding-top: 0pt;
+  line-height: 120%;
+}
+
+
+/*********************************************
+ * TITLE AND SECTIONS SLIDE
+ *********************************************/
+
+.titleslide {
+  h1 {
+  font-size: 4em;
+  font-weight: 900;
+  color: black;
+  text-transform: uppercase;
+  padding-top: 13%;
+}
+}
+
+.sectiondivider {
+  h1 {
+  font-size: 4em;
+  font-weight: 900;
+  color: white;
+  text-transform: uppercase;
+  padding-top: 13%;
+}
+  h2 {
+  color: white;
+  text-transform: uppercase;
+}
+}
+
+
+/*********************************************
+ * TWO-COLUMN SLIDE
+ *********************************************/
+
+.reveal .slides>section.twocolumn {
+  width:100%;
+  height:100%;
+  float: left;
+  padding-top: 3%;
+}
+
+div.leftside {
+  width:24%;
+  height:90%;
+  float:left;
+  border-top:2px solid #F26E3B;
+  padding-left:0px;
+}
+
+div.rightside {
+  float:right;
+  width:74%;
+  height: 90%;
+  margin-left:1px;
+  border-top:2px solid #F26E3B;
+  padding-right:0px;
+}
+
+/*********************************************
+ * SINGLE COLUMN BIG BLACK TEXT
+ *********************************************/
+
+.reveal .slides>section.bigblacktext {
+  width:100%;
+  float: left;
+  padding-top: 3%;
+  border-top:2px solid #F26E3B;
+  h1 {
+    text-transform: none;
+    font-size: 3em;
+    font-weight: 300;
+    color: black;
+    padding-top: 13%;
+}}
+
+/*********************************************
+ * PULL QUOTE SLIDE (SINGLE COLUMN ORANGE)
+ *********************************************/
+
+.reveal .slides>section.pullquoteorange {
+  width:80%;
+  left:5%;
+  padding-top: 3%;
+  p {
+    text-transform: none;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #F26E3B;
+    padding-top: 25%;
+}}
+
+/************
+* IFRAME Fix
+******************/
+
+.reveal iframe {
+  width: 100%;
+  height: 90%;
+  border: none;
+  float: center;
+}

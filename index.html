@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>What do we lose when MAG goes away?</title>
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/coki.css">
+</head>
+<body>
+
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <section class="titleslide" data-background="static_assets/background-title.png">
+                <div vertical-align="middle">
+                    <h1>What do we lose when MAG goes away?</h1>
+                    <h2>What we have, what we need,<br>and how to maintain it?</h2>
+                </div>
+            </section>
+            <section class="twocolumn" data-background="static_assets/background-general.png">
+                <div class="leftside">
+                    <h1>Colophon</h1>
+                </div>
+                <div class="rightside">
+                    <ul>
+                        <li>Code and data on Github: ##CHANGE THIS## <a href="https://github.
+com/Curtin-Open-Knowledge-Initiative/presentation-acs2021/">https://github.
+com/Curtin-Open-Knowledge-Initiative/presentation-acs2021/</a></li>
+                        <li>Presentation on Github: <a href="https://curtin-open-knowledge-initiative.github.
+io/presentation-acs2021/">https://curtin-open-knowledge-initiative.github.io/presentation-acs2021/</a></li>
+                        <li>Code and presentation at Zenodo: <a href="https://doi.org/10.5281/zenodo.4680985">doi:10.5281/zenodo.4680985</a></li>
+                    </ul>
+                    <p><a href="https://doi.org/10.5281/zenodo.4680986"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.4680986.svg" alt="DOI"></a></p>
+                    <p>
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
+                        <br />
+                        Copyright Cameron Neylon and Bianca Kramer 2021. This slide deck is licensed under a
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+                    Code is available under an Apache v2.0 license at Github.
+                    </p>
+                </div>
+            </section>
+        </section>
+        <section class="sectiondivider" data-background="static_assets/background-section.png">
+            <h1>What is the issue here?</h1>
+        </section>
+        <section class="bigblacktext" data-background="static_assets/background-general.png">
+            <h1>[Microsoft Academic Graph]...will be supported until the end of calendar year 2021,
+                upon which time MAS will be retired</h1>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+            <div class="leftside">
+                <h1>Good News and Bad News</h1>
+            </div>
+            <div class="rightside">
+                <ul>
+                    <li>
+                        Microsoft made the data available under an open (ODC-By) license which offers
+                        opportunities to develop new tools and resources, particularly based
+                        on machine learning approaches.
+                    </li>
+                    <li>
+                        Much of the technology is open source and can be adapted or rebuilt to
+                        provide a replacement. Several groups are working on this.
+                    </li>
+                    <li>
+                        Some aspects of what made MAG so useful were dependent on licenses to
+                        content that will be difficult or impossible to renegotiate. Some elements
+                        of the workflows are dependent on the Bing infrastructure.
+                    </li>
+                    <li>
+                        A replacement will need to work smarter in some ways, especially if we
+                        want to reach beyond the core of the academic record (e.g. beyond DOIs)
+                    </li>
+                    <li>
+                        Efforts to replace MAG largely focus on inferring or scraping metadata and
+                        are therefore dependent on access to semi-structured metadata or full text
+                    </li>
+                    <li>
+                        Structured metadata resources are also moving forward in leaps and bounds.
+                        Increasing the upstream provision of structured metadata (i.e. by publishers)
+                        is a complementary strategy route towards a rich open metadata environment
+                    </li>
+                    <li>
+                        We believe services seeking to replace MAG should demonstrate commitment to
+                        the Principles of Open Scholarly Infrastructure (POSI)
+                        to ensure transparency, community governance and an insurance plan for long term
+                        availability
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+        <section class="bigblacktext" data-background="static_assets/background-general.png">
+            <h1>Can we rebuild it? Yes...but...</h1>
+        </section>
+        <section class="bigblacktext" data-background="static_assets/background-general.png">
+            <h1>...how would we know?</h1>
+        </section>
+        <section class="bigblacktext" data-background="static_assets/background-general.png">
+            <h1>...and what content can we (or can't we) use ?</h1>
+        </section>
+        <section class="sectiondivider" data-background="static_assets/background-section.png">
+            <h1>A quick segue on the data</h1>
+            <h2>The Curtin Open Knowledge Initiative</h2>
+        </section>
+        <section class="pullquoteorange" data-background="static_assets/background-title.png">
+            <p>
+                "Our goal is to <strong>change the stories that universities tell about themselves</strong>,
+                placing open knowledge at the heart of that narrative"
+            </p>
+        </section>
+        <section>
+            <section class="twocolumn" data-background="static_assets/background-general.png">
+                <div class="leftside">
+                    <h1>The Data</h1>
+                </div>
+                <div class="rightside">
+                    <img src="static_assets/data.png">
+                </div>
+            </section>
+            <section class="twocolumn" data-background="static_assets/background-general.png">
+                <div class="leftside">
+                    <h1>The Data</h1>
+                </div>
+                <div class="rightside">
+                    <p>Data is derived from the following sources</p>
+                    <ul>
+                        <li>Crossref - weekly dump via Metadata Plus program</li>
+                        <li>Unpaywall - Open Access Status data via open data dump (October 2020)</li>
+                        <li><em>Microsoft Academic - Affiliation and authorship data via biweekly dump</em></li>
+                        <li>GRID - Information on organisations via regular data dump</li>
+                    </ul>
+                    <p>
+                        Data is integrated and processed via Observatory Platform, an open source workflow
+                        system developed within COKI to integrate data related to scholarly communications.
+                        The <a href="https://github.com/The-Academic-Observatory/observatory-platform">code
+                        is available on Github</a>
+                    </p>
+                    <p>
+                        For this analysis we largely use the "DOI Table" which is an aggregation of
+                        multiple data sources that provide information on the outputs identified by
+                        Crossref DOIs. To supplement this we use a de-normalised version of the MAG
+                        database.
+                    </p>
+                    <p>
+                        Code for the analysis, including the queries and processing and a local copy
+                        of the derived data are available at the presentation Github repository.
+                    </p>
+                </div>
+            </section>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+            <div class="leftside">
+                <h1>Information</h1>
+            </div>
+            <div class="rightside">
+                <div style="padding-top:2%;padding-left:5%;height:90%">
+                    <iframe width="650" height="750" src="https://datastudio.google.
+com/embed/reporting/0b057fb6-5e07-4643-92b5-6a25138fce6d/page/Bq6OB" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <a href="http://openknowledge.community/dashboards/">http://openknowledge.community/dashboards/</a>
+                </div>
+            </div>
+        </section>
+        <section class="bigblacktext" data-background="static_assets/background-general.png">
+            <h1>...but because we focus on provenance and transparency, it's also good for...</h1>
+        </section>
+        <section class="sectiondivider" data-background="static_assets/background-section.png">
+            <h1>Comparing MAG with Crossref Metadata</h1>
+            <h2>Who has what, and what do we lose?</h2>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+                <div class="leftside">
+                    <h1>Added Value of MAG to Crossref</h1>
+                </div>
+                <div class="rightside">
+                    <ul>
+                        <li>
+                            <p>Additional metadata for Crossref DOIs / metadata in MAG for non-DOIs</p>
+                        </li>
+                        <li>
+                            Metadata on:
+                            <ul>
+                                <li>Affiliations</li>
+                                <li>Abstracts</li>
+                                <li>Citations</li>
+                                <li>(Open) References</li>
+                                <li>Subjects</li>
+                            </ul>
+                        </li>
+                        <li><p>Split by publication type, year of publication</p></li>
+                        <li><p>all time and for Crossref "current" (2019-21)</p></li>
+                        <li><p>This analysis on data snapshots from 18 July 2021</p></li>
+                    </ul>
+                </div>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+                <div class="leftside">
+                    <h1>MAG vs Crossref Coverage</h1>
+                </div>
+                <div class="rightside">
+                    <iframe data-src="output_files/overall_coverage.html"></iframe>
+                </div>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+                <div class="leftside">
+                    <h1>MAG vs Crossref Coverage (Current)</h1>
+                </div>
+                <div class="rightside">
+                    <iframe data-src="output_files/current_coverage.html"></iframe>
+                </div>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+                <div class="leftside">
+                    <h1>Crossref records in MAG</h1>
+                </div>
+                <div class="rightside">
+                    <iframe data-src="output_files/cr_in_mag_barline.html"></iframe>
+                </div>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+                <div class="leftside">
+                    <h1>Crossref records in MAG - by Crossref type</h1>
+                </div>
+                <div class="rightside">
+                    <iframe data-src="output_files/mag_coverage_by_crossref_type.html"></iframe>
+                </div>
+        </section>
+        <section class="twocolumn"
+                 data-background="static_assets/background-general.png">
+            <div class="leftside">
+                <h1>Crossref records: publication types in Crossref and MAG</h1>
+            </div>
+            <div class="rightside">
+                <iframe data-src="output_files/alluvial_all_time.html"></iframe>
+            </div>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+            <div class="leftside">
+                <h1>Crossref Records: MAG Added Value</h1>
+            </div>
+            <div class="rightside">
+                <iframe data-src="output_files/value_add_all_time.html"></iframe>
+            </div>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+            <div class="leftside">
+                <h1>Crossref Records: MAG Added Value (Current)</h1>
+            </div>
+            <div class="rightside">
+                <iframe data-src="output_files/value_add_crossref_current_2019-21.html"></iframe>
+            </div>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+            <div class="leftside">
+                <h1>Crossref Records: MAG Added Value (Subjects)</h1>
+            </div>
+            <div class="rightside">
+                <iframe data-src="output_files/value_add_subject_all_time.html"></iframe>
+            </div>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+                <div class="leftside">
+                    <h1>MAG Added Value by Crossref Type - Affiliations</h1>
+                </div>
+                <div class="rightside">
+                    <iframe data-src="output_files/affiliations_by_cr_type.html"></iframe>
+                </div>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+                <div class="leftside">
+                    <h1>MAG Added Value by Crossref Type - Abstracts</h1>
+                </div>
+                <div class="rightside">
+                    <iframe data-src="output_files/abstracts_by_cr_type.html"></iframe>
+                </div>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+                <div class="leftside">
+                    <h1>MAG Added Value by Crossref Type - Citations to</h1>
+                </div>
+                <div class="rightside">
+                    <iframe data-src="output_files/citations_to_by_cr_type.html"></iframe>
+                </div>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+                <div class="leftside">
+                    <h1>MAG Added Value by Crossref Type - Citations from</h1>
+                </div>
+                <div class="rightside">
+                    <iframe data-src="output_files/references_from_by_cr_type.html"></iframe>
+                </div>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+                <div class="leftside">
+                    <h1>MAG Added Value by Crossref Type - Subjects</h1>
+                </div>
+                <div class="rightside">
+                    <iframe data-src="output_files/subjects_by_cr_type.html"></iframe>
+                </div>
+        </section>
+        <section class="sectiondivider" data-background="static_assets/background-section.png">
+            <h1>Case studies</h1>
+        </section>
+        <section data-background="static_assets/background-general.png">
+            <h1>References in Crossref - added value MAG (by publisher)</h1>
+            <img src="static_assets/open_citations_bubble.png"></img>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+                <div class="leftside">
+                    <h1>Coverage of affiliations by journal category</h1>
+                </div>
+                <div class="rightside">
+                    <img src="static_assets/affiliations_DOAJ.png"></img>
+                </div>
+        </section>
+        <section class="sectiondivider" data-background="static_assets/background-section.png">
+            <h1>What is in MAG but not in Crossref?</h1>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+                <div class="leftside">
+                    <h1>MAG vs Crossref Coverage</h1>
+                </div>
+                <div class="rightside">
+                    <iframe data-src="output_files/overall_coverage.html"></iframe>
+                </div>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+                <div class="leftside">
+                    <h1>Coverage of non-DOIs in MAG</h1>
+                </div>
+                <div class="rightside">
+                    <img src="static_assets/MAG_not_CR_table1.png"></img>
+                </div>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+                <div class="leftside">
+                    <h1>Coverage of non-DOIs in MAG</h1>
+                </div>
+                <div class="rightside">
+                    <img src="static_assets/MAG_not_CR_table2.png"></img>
+                </div>
+        </section>
+        </section>
+        <section class="sectiondivider" data-background="static_assets/background-section.png">
+            <h1>Open questions</h1>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+            <div class="leftside">
+                <h1>Open questions</h1>
+            </div>
+            <div class="rightside">
+                <ul>
+                    <li>
+                        <p>To what extent does metadata coverage in Crossref and MAG vary by language, discipline, publisher? </p>
+                        What are the causes of such biases? ##add image of affiliation data DOAJ##
+                    </li>
+                    <li>
+                        <p>What other sources/collections of open metadata exist? ##slide with logo's##</p>
+                    </li>
+                    <li>
+                        <p>What is the role of metadata provision vs extraction of full-text?</p>
+                    </li>
+                    <li>
+                        <p>What additional source providers of authoritative metadata beyond publishers are there, and how can this be harnessed? </p>
+                    </li>
+                    <li>
+                        <p>What is needed to safeguard transparent data collection, provenance and sustainability? </p>
+                    </li>
+                    <li>
+                        <p>How can we (as a community) not only replace MAG, but do better? </p>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+        <section class="sectiondivider" data-background="static_assets/background-section.png">
+            <h1>Conclusions</h1>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+            <div class="leftside">
+                <h1>Conclusions</h1>
+            </div>
+            <div class="rightside">
+                <ul>
+                    <li>
+                        <p>
+                            MAG was a great resource, and its openness will enable us to build back better
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            There are challenges in systematically gaining access to underlying information
+                            to replicate some aspects of MAG (eg subject classifications)
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Improvements to the provision of structured metadata by publishers (ROR, ORCID,
+                            I4OC, I4OA etc) have a great potential to improve metadata coverage
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            But gaps will still need to be filled (and back-filled). Access to content,
+                            including abstracts and ideally full-text is critical to make this happen beyond
+                            the low hanging fruit
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            There are big gaps and under-represented areas, including content beyond journal
+                            articles and smaller (and often non-APC open access) journals
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="bigblacktext" data-background="static_assets/background-general.png">
+            <h1>Tackle the problem from both ends...</h1>
+        </section>
+        <section class="bigblacktext" data-background="static_assets/background-general.png">
+            <h1>...meet in the middle for a rich metadata future</h1>
+        </section>
+        <section class="twocolumn" data-background="static_assets/background-general.png">
+            <div class="leftside">
+                <h1>COKI Team</h1>
+            </div>
+            <div class="rightside">
+                <div style="width:45%;float:left">
+                    <p><strong>Centre for Culture and Technology</strong></p>
+                    <ul>
+                        <li>Cameron Neylon</li>
+                        <li>Lucy Montgomery</li>
+                        <li>Katie Wilson</li>
+                        <li>Chun-Kai (Karl) Huang</li>
+                        <li>Chloe-Brookes Kenworthy</li>
+                        <li>Tim Winkler</li>
+                    </ul>
+                    <p><strong>Funding from</strong></p>
+                    <ul>
+                        <li>Research Office at Curtin</li>
+                        <li>Faculty of Humanities</li>
+                        <li>School of Media, Creative Arts and Social Enquiry</li>
+                        <li>Andrew W. Mellon Foundation</li>
+                        <li>Arcadia</li>
+                    </ul>
+                </div>
+                <div style="width:45%;float:right">
+                    <p><strong>Curtin Institute for Computation</strong></p>
+                    <ul>
+                        <li>Richard Hosking</li>
+                        <li>Rebecca Handcock</li>
+                        <li>Aniek Roelofs</li>
+                        <li>Jamie Diprose</li>
+                        <li>Tuan Chien</li>
+                    </ul>
+                    <p><strong>Educopia Foundation</strong></p>
+                    <ul>
+                        <li>Katherine Skinner</li>
+                        <li>Rebecca Meyerson</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="sectiondivider" data-background="static_assets/background-section.png">
+            <h1> </h1>
+            <h2>@COKIProject - @cameronneylon</h2>
+            <h2>http://openknowledge.community
+                <ul>
+                    <li>Subscribe to the COKI Newsletter</li>
+                    <li>View the public dashboards</li>
+                </ul>
+            </h2>
+        </section>
+        <section class="sectiondivider" data-background="static_assets/background-section.png">
+            <h1>Additional Data and Notes</h1>
+        </section>
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+
+<script type="text/javascript">
+        Reveal.initialize({center: false});
+</script>
+
+<p></body>
+</html></p>
