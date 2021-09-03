@@ -32031,3 +32031,364 @@
 2021-09-03 13:44:24,320 DEBUG  copying output to local output directory output_files
 2021-09-03 13:44:24,320 DEBUG    removing old output_files
 2021-09-03 13:44:24,335 DEBUG    copying files to output_files
+2021-09-03 14:09:54,095 INFO   
+2021-09-03 14:09:54,095 INFO   ***** BEGIN LOGGING BATCH 6cef88e3-3dd6-44d5-ad5d-00ca991b4ee5
+2021-09-03 14:09:54,095 INFO   
+2021-09-03 14:09:54,096 DEBUG  Config:
+2021-09-03 14:09:54,096 DEBUG  cache_bucket_name: 'output_cache'
+2021-09-03 14:09:54,096 DEBUG  output_bucket_name: 'output_files'
+2021-09-03 14:09:54,096 DEBUG  logfile: 'logs/precipy.log'
+2021-09-03 14:09:54,096 DEBUG  loglevel: 'DEBUG'
+2021-09-03 14:09:54,096 DEBUG  constants: {'PROJECT_ID': 'utrecht-university', 'YEAR_RANGE': [1980, 2026]}
+2021-09-03 14:09:54,096 DEBUG  ranges: {}
+2021-09-03 14:09:54,096 DEBUG  analytics: [['get_doi_table_data', {}], ['get_mag_table_data', {}], ['value_add_tables_graphs', {'depends': ['get_doi_table_data']}], ['alluvial_graph', {'depends': ['get_doi_table_data']}], ['mag_coverage_by_cr_type', {'depends': ['get_doi_table_data']}], ['overall_comparison', {'depends': ['get_doi_table_data', 'get_mag_table_data']}], ['mag_in_crossref_by_pubdate', {'depends': ['get_doi_table_data', 'get_mag_table_data']}]]
+2021-09-03 14:09:54,096 DEBUG  templates: ['report_template.md']
+2021-09-03 14:09:54,096 DEBUG  filters: [['markdown', 'html'], ['xhtml2pdf', 'pdf']]
+2021-09-03 14:09:54,096 DEBUG  opts: None
+2021-09-03 14:09:54,097 DEBUG  returning bool False from is_opt_reset
+2021-09-03 14:09:54,097 INFO   tempdir is /var/folders/jl/3fwcj4hx1l51k76d0wsv_2d46cdvjk/T/precipy
+2021-09-03 14:09:54,109 DEBUG  in setup_document_templates
+2021-09-03 14:09:54,109 INFO   collecting list of document templates to process...
+2021-09-03 14:09:54,110 INFO   looking for templates specified under config key 'templates'
+2021-09-03 14:09:54,110 INFO     found template(s): report_template.md
+2021-09-03 14:09:54,110 INFO   looking for templates specified under config key 'template_file'
+2021-09-03 14:09:54,110 INFO   looking for templates specified under config key 'template_files'
+2021-09-03 14:09:54,110 DEBUG  
+2021-09-03 14:09:54,110 DEBUG  now processing range env {}
+2021-09-03 14:09:54,110 DEBUG  range key is 
+2021-09-03 14:09:54,110 DEBUG  
+2021-09-03 14:09:54,110 DEBUG  ***** ANALYTICS
+2021-09-03 14:09:54,110 DEBUG  
+2021-09-03 14:09:54,110 DEBUG  in generate_analytics with available modules:
+2021-09-03 14:09:54,110 DEBUG       <module 'process' from '/Users/266883j/PycharmProjects/what_do_we_lose_mag/process.py'>
+2021-09-03 14:09:54,111 INFO   matched 'get_doi_table_data' to fn <function get_doi_table_data at 0x7fa3634e1560>
+2021-09-03 14:09:54,126 DEBUG  
+2021-09-03 14:09:54,126 DEBUG  computing hash for dict from:
+2021-09-03 14:09:54,126 DEBUG    analytics_function_source: 7584887489e0324cd352225ee44926e3
+2021-09-03 14:09:54,127 DEBUG    arg_values:
+2021-09-03 14:09:54,127 DEBUG    batch_source: e3464404029c7a77254e6c8ab2862817
+2021-09-03 14:09:54,127 DEBUG    canonical_function_name: get_doi_table_data
+2021-09-03 14:09:54,127 DEBUG    depends: None
+2021-09-03 14:09:54,127 DEBUG    fn_source: f724317b9834fde8b654ddc80bcdac05
+2021-09-03 14:09:54,127 DEBUG  843500f03eee8d9fe6451c8884faa60728879293fc7ecc3fff053f206ec3b041
+2021-09-03 14:09:54,127 DEBUG  
+2021-09-03 14:09:54,127 DEBUG  calculated hash for get_doi_table_data is 843500f03eee8d9fe6451c8884faa60728879293fc7ecc3fff053f206ec3b041
+2021-09-03 14:09:54,128 DEBUG  checking for cached metadata from a prior run
+2021-09-03 14:09:54,129 DEBUG    in /var/folders/jl/3fwcj4hx1l51k76d0wsv_2d46cdvjk/T/precipy/output_cache/84/843500f03eee8d9fe6451c8884faa60728879293fc7ecc3fff053f206ec3b041.pkl
+2021-09-03 14:09:54,130 DEBUG      success!
+2021-09-03 14:09:54,131 INFO   matched 'get_mag_table_data' to fn <function get_mag_table_data at 0x7fa3663c3d40>
+2021-09-03 14:09:54,132 DEBUG  
+2021-09-03 14:09:54,132 DEBUG  computing hash for dict from:
+2021-09-03 14:09:54,132 DEBUG    analytics_function_source: 7584887489e0324cd352225ee44926e3
+2021-09-03 14:09:54,133 DEBUG    arg_values:
+2021-09-03 14:09:54,133 DEBUG    batch_source: e3464404029c7a77254e6c8ab2862817
+2021-09-03 14:09:54,133 DEBUG    canonical_function_name: get_mag_table_data
+2021-09-03 14:09:54,133 DEBUG    depends: None
+2021-09-03 14:09:54,133 DEBUG    fn_source: ffb11762f2d39a56a68885ee2eddbe71
+2021-09-03 14:09:54,133 DEBUG  6617e76f9c85a953c8673c8695154a3495fbe24d7820a199b78529778f62e274
+2021-09-03 14:09:54,133 DEBUG  
+2021-09-03 14:09:54,133 DEBUG  calculated hash for get_mag_table_data is 6617e76f9c85a953c8673c8695154a3495fbe24d7820a199b78529778f62e274
+2021-09-03 14:09:54,134 DEBUG  checking for cached metadata from a prior run
+2021-09-03 14:09:54,134 DEBUG    in /var/folders/jl/3fwcj4hx1l51k76d0wsv_2d46cdvjk/T/precipy/output_cache/66/6617e76f9c85a953c8673c8695154a3495fbe24d7820a199b78529778f62e274.pkl
+2021-09-03 14:09:54,135 DEBUG      success!
+2021-09-03 14:09:54,136 INFO   matched 'value_add_tables_graphs' to fn <function value_add_tables_graphs at 0x7fa3663c39e0>
+2021-09-03 14:09:54,150 DEBUG  
+2021-09-03 14:09:54,151 DEBUG  computing hash for dict from:
+2021-09-03 14:09:54,151 DEBUG    analytics_function_source: 7584887489e0324cd352225ee44926e3
+2021-09-03 14:09:54,151 DEBUG    arg_values:
+2021-09-03 14:09:54,151 DEBUG    batch_source: e3464404029c7a77254e6c8ab2862817
+2021-09-03 14:09:54,151 DEBUG    canonical_function_name: value_add_tables_graphs
+2021-09-03 14:09:54,151 DEBUG    depends: ['843500f03eee8d9fe6451c8884faa60728879293fc7ecc3fff053f206ec3b041']
+2021-09-03 14:09:54,151 DEBUG    fn_source: af0beb5aaf7ccf44495d3406e7412e8e
+2021-09-03 14:09:54,151 DEBUG  e2ce0e92750431282b2733006cc79a457bc9084e136ce28257a27612f4918f29
+2021-09-03 14:09:54,151 DEBUG  
+2021-09-03 14:09:54,151 DEBUG  calculated hash for value_add_tables_graphs is e2ce0e92750431282b2733006cc79a457bc9084e136ce28257a27612f4918f29
+2021-09-03 14:09:54,164 DEBUG  checking for cached metadata from a prior run
+2021-09-03 14:09:54,164 DEBUG    in /var/folders/jl/3fwcj4hx1l51k76d0wsv_2d46cdvjk/T/precipy/output_cache/e2/e2ce0e92750431282b2733006cc79a457bc9084e136ce28257a27612f4918f29.pkl
+2021-09-03 14:09:54,166 DEBUG      success!
+2021-09-03 14:09:54,168 INFO   matched 'alluvial_graph' to fn <function alluvial_graph at 0x7fa3663de5f0>
+2021-09-03 14:09:54,175 DEBUG  
+2021-09-03 14:09:54,175 DEBUG  computing hash for dict from:
+2021-09-03 14:09:54,175 DEBUG    analytics_function_source: 7584887489e0324cd352225ee44926e3
+2021-09-03 14:09:54,175 DEBUG    arg_values:
+2021-09-03 14:09:54,175 DEBUG    batch_source: e3464404029c7a77254e6c8ab2862817
+2021-09-03 14:09:54,175 DEBUG    canonical_function_name: alluvial_graph
+2021-09-03 14:09:54,175 DEBUG    depends: ['843500f03eee8d9fe6451c8884faa60728879293fc7ecc3fff053f206ec3b041']
+2021-09-03 14:09:54,175 DEBUG    fn_source: db529a09e3e7acbc2eaa59f8d13eaa6e
+2021-09-03 14:09:54,175 DEBUG  83efd7070a84cb9d19063985347044a45c23b04a7084e488f24067c0ba78a92d
+2021-09-03 14:09:54,176 DEBUG  
+2021-09-03 14:09:54,176 DEBUG  calculated hash for alluvial_graph is 83efd7070a84cb9d19063985347044a45c23b04a7084e488f24067c0ba78a92d
+2021-09-03 14:09:54,182 DEBUG  checking for cached metadata from a prior run
+2021-09-03 14:09:54,182 DEBUG    in /var/folders/jl/3fwcj4hx1l51k76d0wsv_2d46cdvjk/T/precipy/output_cache/83/83efd7070a84cb9d19063985347044a45c23b04a7084e488f24067c0ba78a92d.pkl
+2021-09-03 14:09:54,184 DEBUG      success!
+2021-09-03 14:09:54,188 INFO   matched 'mag_coverage_by_cr_type' to fn <function mag_coverage_by_cr_type at 0x7fa3663de440>
+2021-09-03 14:09:54,196 DEBUG  
+2021-09-03 14:09:54,196 DEBUG  computing hash for dict from:
+2021-09-03 14:09:54,197 DEBUG    analytics_function_source: 7584887489e0324cd352225ee44926e3
+2021-09-03 14:09:54,197 DEBUG    arg_values:
+2021-09-03 14:09:54,197 DEBUG    batch_source: e3464404029c7a77254e6c8ab2862817
+2021-09-03 14:09:54,197 DEBUG    canonical_function_name: mag_coverage_by_cr_type
+2021-09-03 14:09:54,197 DEBUG    depends: ['843500f03eee8d9fe6451c8884faa60728879293fc7ecc3fff053f206ec3b041']
+2021-09-03 14:09:54,197 DEBUG    fn_source: 30548b8af878b5a0f0c71c251e6e3c30
+2021-09-03 14:09:54,197 DEBUG  bb0c5fe6cb17f5519d58613fc76a3272bda5617e3f02c3b01da7139b2e295fef
+2021-09-03 14:09:54,197 DEBUG  
+2021-09-03 14:09:54,197 DEBUG  calculated hash for mag_coverage_by_cr_type is bb0c5fe6cb17f5519d58613fc76a3272bda5617e3f02c3b01da7139b2e295fef
+2021-09-03 14:09:54,203 DEBUG  checking for cached metadata from a prior run
+2021-09-03 14:09:54,203 DEBUG    in /var/folders/jl/3fwcj4hx1l51k76d0wsv_2d46cdvjk/T/precipy/output_cache/bb/bb0c5fe6cb17f5519d58613fc76a3272bda5617e3f02c3b01da7139b2e295fef.pkl
+2021-09-03 14:09:54,204 DEBUG      not found, checking remote storages...
+2021-09-03 14:09:54,204 DEBUG  in download_from_storages for /var/folders/jl/3fwcj4hx1l51k76d0wsv_2d46cdvjk/T/precipy/output_cache/bb/bb0c5fe6cb17f5519d58613fc76a3272bda5617e3f02c3b01da7139b2e295fef.pkl
+2021-09-03 14:09:54,204 DEBUG      not found
+2021-09-03 14:09:54,204 DEBUG  cached metadata not found locally or remotely, running the function
+2021-09-03 14:09:54,204 DEBUG  
+2021-09-03 14:09:54,204 DEBUG  computing hash for dict from:
+2021-09-03 14:09:54,205 DEBUG    filename: doi_table_data_store.hd5
+2021-09-03 14:09:54,205 DEBUG    fn_hash: 843500f03eee8d9fe6451c8884faa60728879293fc7ecc3fff053f206ec3b041
+2021-09-03 14:09:54,205 DEBUG  893f042467f7d0ecda527ca7d664e2f65cfcbd37f82076a4007d46f555451837
+2021-09-03 14:09:54,205 DEBUG  
+2021-09-03 14:09:56,726 DEBUG  
+2021-09-03 14:09:56,726 DEBUG  computing hash for dict from:
+2021-09-03 14:09:56,726 DEBUG    filename: mag_coverage_by_crossref_type.png
+2021-09-03 14:09:56,726 DEBUG    fn_hash: bb0c5fe6cb17f5519d58613fc76a3272bda5617e3f02c3b01da7139b2e295fef
+2021-09-03 14:09:56,726 DEBUG  5490a738f26f5d232e447ac3652584f1bdaf8b00856963c7f6e7f4890d115ca9
+2021-09-03 14:09:56,726 DEBUG  
+2021-09-03 14:09:56,728 DEBUG  
+2021-09-03 14:09:56,728 DEBUG  computing hash for dict from:
+2021-09-03 14:09:56,728 DEBUG    filename: mag_coverage_by_crossref_type.png
+2021-09-03 14:09:56,728 DEBUG    fn_hash: bb0c5fe6cb17f5519d58613fc76a3272bda5617e3f02c3b01da7139b2e295fef
+2021-09-03 14:09:56,728 DEBUG  5490a738f26f5d232e447ac3652584f1bdaf8b00856963c7f6e7f4890d115ca9
+2021-09-03 14:09:56,728 DEBUG  
+2021-09-03 14:09:56,728 DEBUG  
+2021-09-03 14:09:56,728 DEBUG  computing hash for dict from:
+2021-09-03 14:09:56,729 DEBUG    filename: bb0c5fe6cb17f5519d58613fc76a3272bda5617e3f02c3b01da7139b2e295fef
+2021-09-03 14:09:56,729 DEBUG    fn_hash: mag_coverage_by_crossref_type.png
+2021-09-03 14:09:56,729 DEBUG  42100ee64d3732788b1828b29ed451430a16c19b789ccabbb47f39a95ab18e2b
+2021-09-03 14:09:56,729 DEBUG  
+2021-09-03 14:09:56,766 DEBUG  
+2021-09-03 14:09:56,766 DEBUG  computing hash for dict from:
+2021-09-03 14:09:56,766 DEBUG    filename: mag_coverage_by_crossref_type.html
+2021-09-03 14:09:56,766 DEBUG    fn_hash: bb0c5fe6cb17f5519d58613fc76a3272bda5617e3f02c3b01da7139b2e295fef
+2021-09-03 14:09:56,766 DEBUG  ccd9e42c685d93c14d3b2ef461897149df5bee664ddd8ba2911a7e2a107da672
+2021-09-03 14:09:56,766 DEBUG  
+2021-09-03 14:09:56,769 DEBUG  
+2021-09-03 14:09:56,769 DEBUG  computing hash for dict from:
+2021-09-03 14:09:56,769 DEBUG    filename: mag_coverage_by_crossref_type.html
+2021-09-03 14:09:56,769 DEBUG    fn_hash: bb0c5fe6cb17f5519d58613fc76a3272bda5617e3f02c3b01da7139b2e295fef
+2021-09-03 14:09:56,769 DEBUG  ccd9e42c685d93c14d3b2ef461897149df5bee664ddd8ba2911a7e2a107da672
+2021-09-03 14:09:56,769 DEBUG  
+2021-09-03 14:09:56,769 DEBUG  
+2021-09-03 14:09:56,770 DEBUG  computing hash for dict from:
+2021-09-03 14:09:56,770 DEBUG    filename: bb0c5fe6cb17f5519d58613fc76a3272bda5617e3f02c3b01da7139b2e295fef
+2021-09-03 14:09:56,770 DEBUG    fn_hash: mag_coverage_by_crossref_type.html
+2021-09-03 14:09:56,770 DEBUG  8df844bffa8cf0f0e13ab432baf5b579855a0bf06a07cc6c064e0dea88a5ea28
+2021-09-03 14:09:56,770 DEBUG  
+2021-09-03 14:09:56,771 DEBUG    saving metadata to /var/folders/jl/3fwcj4hx1l51k76d0wsv_2d46cdvjk/T/precipy/output_cache/bb/bb0c5fe6cb17f5519d58613fc76a3272bda5617e3f02c3b01da7139b2e295fef.pkl
+2021-09-03 14:09:56,772 DEBUG    run function complete
+2021-09-03 14:09:56,772 INFO   matched 'overall_comparison' to fn <function overall_comparison at 0x7fa3663de9e0>
+2021-09-03 14:09:56,778 DEBUG  
+2021-09-03 14:09:56,778 DEBUG  computing hash for dict from:
+2021-09-03 14:09:56,778 DEBUG    analytics_function_source: 7584887489e0324cd352225ee44926e3
+2021-09-03 14:09:56,778 DEBUG    arg_values:
+2021-09-03 14:09:56,778 DEBUG    batch_source: e3464404029c7a77254e6c8ab2862817
+2021-09-03 14:09:56,778 DEBUG    canonical_function_name: overall_comparison
+2021-09-03 14:09:56,778 DEBUG    depends: ['843500f03eee8d9fe6451c8884faa60728879293fc7ecc3fff053f206ec3b041', '6617e76f9c85a953c8673c8695154a3495fbe24d7820a199b78529778f62e274']
+2021-09-03 14:09:56,778 DEBUG    fn_source: dac48212e1efe080ed001ad2279a3b62
+2021-09-03 14:09:56,778 DEBUG  4304b4c67e57c35790a552ccfd191ca4b04b518dd7bfc75718b55bb107b6ea21
+2021-09-03 14:09:56,778 DEBUG  
+2021-09-03 14:09:56,779 DEBUG  calculated hash for overall_comparison is 4304b4c67e57c35790a552ccfd191ca4b04b518dd7bfc75718b55bb107b6ea21
+2021-09-03 14:09:56,783 DEBUG  checking for cached metadata from a prior run
+2021-09-03 14:09:56,783 DEBUG    in /var/folders/jl/3fwcj4hx1l51k76d0wsv_2d46cdvjk/T/precipy/output_cache/43/4304b4c67e57c35790a552ccfd191ca4b04b518dd7bfc75718b55bb107b6ea21.pkl
+2021-09-03 14:09:56,784 DEBUG      success!
+2021-09-03 14:09:56,785 INFO   matched 'mag_in_crossref_by_pubdate' to fn <function mag_in_crossref_by_pubdate at 0x7fa3663dea70>
+2021-09-03 14:09:56,788 DEBUG  
+2021-09-03 14:09:56,788 DEBUG  computing hash for dict from:
+2021-09-03 14:09:56,788 DEBUG    analytics_function_source: 7584887489e0324cd352225ee44926e3
+2021-09-03 14:09:56,788 DEBUG    arg_values:
+2021-09-03 14:09:56,788 DEBUG    batch_source: e3464404029c7a77254e6c8ab2862817
+2021-09-03 14:09:56,788 DEBUG    canonical_function_name: mag_in_crossref_by_pubdate
+2021-09-03 14:09:56,789 DEBUG    depends: ['843500f03eee8d9fe6451c8884faa60728879293fc7ecc3fff053f206ec3b041', '6617e76f9c85a953c8673c8695154a3495fbe24d7820a199b78529778f62e274']
+2021-09-03 14:09:56,789 DEBUG    fn_source: 4e41d7449bfd54f8ac4745c019517f95
+2021-09-03 14:09:56,789 DEBUG  9c69783bb5aeab5f6e891e0fefa6491413067e8f8c27dae4c59b7ffc3931d807
+2021-09-03 14:09:56,789 DEBUG  
+2021-09-03 14:09:56,789 DEBUG  calculated hash for mag_in_crossref_by_pubdate is 9c69783bb5aeab5f6e891e0fefa6491413067e8f8c27dae4c59b7ffc3931d807
+2021-09-03 14:09:56,792 DEBUG  checking for cached metadata from a prior run
+2021-09-03 14:09:56,792 DEBUG    in /var/folders/jl/3fwcj4hx1l51k76d0wsv_2d46cdvjk/T/precipy/output_cache/9c/9c69783bb5aeab5f6e891e0fefa6491413067e8f8c27dae4c59b7ffc3931d807.pkl
+2021-09-03 14:09:56,794 DEBUG      success!
+2021-09-03 14:09:56,795 DEBUG  
+2021-09-03 14:09:56,795 DEBUG  ***** DOCUMENTS
+2021-09-03 14:09:56,795 DEBUG  
+2021-09-03 14:09:56,874 DEBUG  populating work dir /var/folders/jl/3fwcj4hx1l51k76d0wsv_2d46cdvjk/T/precipy/output_cache/docs/4aa530a13844ef1c536b0e9b99955f9d
+2021-09-03 14:09:56,875 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:09:56,876 DEBUG    copying supp file doi_table_data_store.hd5
+2021-09-03 14:09:56,880 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:09:56,881 DEBUG    copying supp file mag_table_data_store.hd5
+2021-09-03 14:09:56,893 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:09:56,894 DEBUG    copying supp file value_add_all_time.png
+2021-09-03 14:09:56,898 DEBUG    copying supp file value_add_all_time.html
+2021-09-03 14:09:56,904 DEBUG    copying supp file value_add_subject_all_time.png
+2021-09-03 14:09:56,908 DEBUG    copying supp file value_add_subject_all_time.html
+2021-09-03 14:09:56,915 DEBUG    copying supp file value_add_crossref_current_2019-21.png
+2021-09-03 14:09:56,918 DEBUG    copying supp file value_add_crossref_current_2019-21.html
+2021-09-03 14:09:56,924 DEBUG    copying supp file value_add_subject_crossref_current_2019-21.png
+2021-09-03 14:09:56,928 DEBUG    copying supp file value_add_subject_crossref_current_2019-21.html
+2021-09-03 14:09:56,937 DEBUG    copying supp file value_add_2020_only.png
+2021-09-03 14:09:56,940 DEBUG    copying supp file value_add_2020_only.html
+2021-09-03 14:09:56,957 DEBUG    copying supp file value_add_subject_2020_only.png
+2021-09-03 14:09:56,961 DEBUG    copying supp file value_add_subject_2020_only.html
+2021-09-03 14:09:56,971 DEBUG    copying supp file summary_doi_metadata_coverage.json
+2021-09-03 14:09:56,972 DEBUG    copying supp file summary_value_add_table.html
+2021-09-03 14:09:56,982 DEBUG    copying supp file abstracts_by_cr_type.png
+2021-09-03 14:09:56,985 DEBUG    copying supp file abstracts_by_cr_type.html
+2021-09-03 14:09:56,993 DEBUG    copying supp file affiliations_by_cr_type.png
+2021-09-03 14:09:56,997 DEBUG    copying supp file affiliations_by_cr_type.html
+2021-09-03 14:09:57,004 DEBUG    copying supp file citations_to_by_cr_type.png
+2021-09-03 14:09:57,007 DEBUG    copying supp file citations_to_by_cr_type.html
+2021-09-03 14:09:57,018 DEBUG    copying supp file references_from_by_cr_type.png
+2021-09-03 14:09:57,021 DEBUG    copying supp file references_from_by_cr_type.html
+2021-09-03 14:09:57,030 DEBUG    copying supp file subjects_by_cr_type.png
+2021-09-03 14:09:57,034 DEBUG    copying supp file subjects_by_cr_type.html
+2021-09-03 14:09:57,043 DEBUG    copying supp file summary_doi_metadata_coverage_by_type_alltime.json
+2021-09-03 14:09:57,045 DEBUG    copying supp file summary_doi_metadata_coverage_by_type_2020.json
+2021-09-03 14:09:57,046 DEBUG    copying supp file summary_doi_metadata_coverage_by_type_current.json
+2021-09-03 14:09:57,047 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:09:57,047 DEBUG    copying supp file alluvial_all_time.png
+2021-09-03 14:09:57,049 DEBUG    copying supp file alluvial_all_time.html
+2021-09-03 14:09:57,061 DEBUG    copying supp file alluvial_current.png
+2021-09-03 14:09:57,065 DEBUG    copying supp file alluvial_current.html
+2021-09-03 14:09:57,075 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:09:57,077 DEBUG    copying supp file mag_coverage_by_crossref_type.png
+2021-09-03 14:09:57,078 DEBUG    copying supp file mag_coverage_by_crossref_type.html
+2021-09-03 14:09:57,134 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:09:57,135 DEBUG    copying supp file overall_coverage.png
+2021-09-03 14:09:57,137 DEBUG    copying supp file overall_coverage.html
+2021-09-03 14:09:57,149 DEBUG    copying supp file 2020_coverage.png
+2021-09-03 14:09:57,152 DEBUG    copying supp file current_coverage.png
+2021-09-03 14:09:57,153 DEBUG    copying supp file current_coverage.html
+2021-09-03 14:09:57,161 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:09:57,162 DEBUG    copying supp file cr_in_mag_barline.png
+2021-09-03 14:09:57,164 DEBUG    copying supp file cr_in_mag_barline.html
+2021-09-03 14:09:57,172 DEBUG  
+2021-09-03 14:09:57,172 DEBUG  computing hash for dict from:
+2021-09-03 14:09:57,173 DEBUG    filter_args: []
+2021-09-03 14:09:57,173 DEBUG    filter_ext: html
+2021-09-03 14:09:57,173 DEBUG    filter_name: markdown
+2021-09-03 14:09:57,173 DEBUG    template_hash: 4aa530a13844ef1c536b0e9b99955f9d
+2021-09-03 14:09:57,173 DEBUG  810e1d4bd52d5b0060215eb90ee1c03a6707333b418105e93b2128ccdd9db4f0
+2021-09-03 14:09:57,173 DEBUG  
+2021-09-03 14:09:57,344 DEBUG  populating work dir /var/folders/jl/3fwcj4hx1l51k76d0wsv_2d46cdvjk/T/precipy/output_cache/docs/810e1d4bd52d5b0060215eb90ee1c03a6707333b418105e93b2128ccdd9db4f0
+2021-09-03 14:09:57,345 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:09:57,345 DEBUG    copying supp file doi_table_data_store.hd5
+2021-09-03 14:09:57,349 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:09:57,350 DEBUG    copying supp file mag_table_data_store.hd5
+2021-09-03 14:09:57,363 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:09:57,364 DEBUG    copying supp file value_add_all_time.png
+2021-09-03 14:09:57,364 DEBUG    copying supp file value_add_all_time.html
+2021-09-03 14:09:57,368 DEBUG    copying supp file value_add_subject_all_time.png
+2021-09-03 14:09:57,369 DEBUG    copying supp file value_add_subject_all_time.html
+2021-09-03 14:09:57,374 DEBUG    copying supp file value_add_crossref_current_2019-21.png
+2021-09-03 14:09:57,374 DEBUG    copying supp file value_add_crossref_current_2019-21.html
+2021-09-03 14:09:57,380 DEBUG    copying supp file value_add_subject_crossref_current_2019-21.png
+2021-09-03 14:09:57,381 DEBUG    copying supp file value_add_subject_crossref_current_2019-21.html
+2021-09-03 14:09:57,385 DEBUG    copying supp file value_add_2020_only.png
+2021-09-03 14:09:57,386 DEBUG    copying supp file value_add_2020_only.html
+2021-09-03 14:09:57,390 DEBUG    copying supp file value_add_subject_2020_only.png
+2021-09-03 14:09:57,391 DEBUG    copying supp file value_add_subject_2020_only.html
+2021-09-03 14:09:57,394 DEBUG    copying supp file summary_doi_metadata_coverage.json
+2021-09-03 14:09:57,395 DEBUG    copying supp file summary_value_add_table.html
+2021-09-03 14:09:57,400 DEBUG    copying supp file abstracts_by_cr_type.png
+2021-09-03 14:09:57,401 DEBUG    copying supp file abstracts_by_cr_type.html
+2021-09-03 14:09:57,405 DEBUG    copying supp file affiliations_by_cr_type.png
+2021-09-03 14:09:57,406 DEBUG    copying supp file affiliations_by_cr_type.html
+2021-09-03 14:09:57,410 DEBUG    copying supp file citations_to_by_cr_type.png
+2021-09-03 14:09:57,410 DEBUG    copying supp file citations_to_by_cr_type.html
+2021-09-03 14:09:57,414 DEBUG    copying supp file references_from_by_cr_type.png
+2021-09-03 14:09:57,414 DEBUG    copying supp file references_from_by_cr_type.html
+2021-09-03 14:09:57,419 DEBUG    copying supp file subjects_by_cr_type.png
+2021-09-03 14:09:57,420 DEBUG    copying supp file subjects_by_cr_type.html
+2021-09-03 14:09:57,425 DEBUG    copying supp file summary_doi_metadata_coverage_by_type_alltime.json
+2021-09-03 14:09:57,425 DEBUG    copying supp file summary_doi_metadata_coverage_by_type_2020.json
+2021-09-03 14:09:57,426 DEBUG    copying supp file summary_doi_metadata_coverage_by_type_current.json
+2021-09-03 14:09:57,426 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:09:57,427 DEBUG    copying supp file alluvial_all_time.png
+2021-09-03 14:09:57,428 DEBUG    copying supp file alluvial_all_time.html
+2021-09-03 14:09:57,431 DEBUG    copying supp file alluvial_current.png
+2021-09-03 14:09:57,432 DEBUG    copying supp file alluvial_current.html
+2021-09-03 14:09:57,435 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:09:57,435 DEBUG    copying supp file mag_coverage_by_crossref_type.png
+2021-09-03 14:09:57,438 DEBUG    copying supp file mag_coverage_by_crossref_type.html
+2021-09-03 14:09:57,441 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:09:57,442 DEBUG    copying supp file overall_coverage.png
+2021-09-03 14:09:57,443 DEBUG    copying supp file overall_coverage.html
+2021-09-03 14:09:57,446 DEBUG    copying supp file 2020_coverage.png
+2021-09-03 14:09:57,447 DEBUG    copying supp file current_coverage.png
+2021-09-03 14:09:57,447 DEBUG    copying supp file current_coverage.html
+2021-09-03 14:09:57,450 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:09:57,451 DEBUG    copying supp file cr_in_mag_barline.png
+2021-09-03 14:09:57,452 DEBUG    copying supp file cr_in_mag_barline.html
+2021-09-03 14:09:57,455 DEBUG  
+2021-09-03 14:09:57,455 DEBUG  computing hash for dict from:
+2021-09-03 14:09:57,455 DEBUG    filter_args: []
+2021-09-03 14:09:57,455 DEBUG    filter_ext: pdf
+2021-09-03 14:09:57,455 DEBUG    filter_name: xhtml2pdf
+2021-09-03 14:09:57,456 DEBUG    template_hash: 4aa530a13844ef1c536b0e9b99955f9d
+2021-09-03 14:09:57,456 DEBUG  418d999399f82ecf7557f175b1b235179d568f6483e83eb01e3826897b2dff11
+2021-09-03 14:09:57,456 DEBUG  
+2021-09-03 14:10:01,528 DEBUG  
+2021-09-03 14:10:01,528 DEBUG  ***** PUBLISH
+2021-09-03 14:10:01,528 DEBUG  
+2021-09-03 14:10:01,528 DEBUG  in publish_documents with range key 
+2021-09-03 14:10:01,529 DEBUG  changing dir to /var/folders/jl/3fwcj4hx1l51k76d0wsv_2d46cdvjk/T/precipy/output_files
+2021-09-03 14:10:01,529 DEBUG    copying file to report_template.md
+2021-09-03 14:10:01,530 DEBUG    copying file to report_template.html
+2021-09-03 14:10:01,530 DEBUG    copying file to report_template.pdf
+2021-09-03 14:10:01,532 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:10:01,532 DEBUG    copying supp file doi_table_data_store.hd5
+2021-09-03 14:10:01,536 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:10:01,539 DEBUG    copying supp file mag_table_data_store.hd5
+2021-09-03 14:10:01,548 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:10:01,549 DEBUG    copying supp file value_add_all_time.png
+2021-09-03 14:10:01,550 DEBUG    copying supp file value_add_all_time.html
+2021-09-03 14:10:01,555 DEBUG    copying supp file value_add_subject_all_time.png
+2021-09-03 14:10:01,556 DEBUG    copying supp file value_add_subject_all_time.html
+2021-09-03 14:10:01,560 DEBUG    copying supp file value_add_crossref_current_2019-21.png
+2021-09-03 14:10:01,561 DEBUG    copying supp file value_add_crossref_current_2019-21.html
+2021-09-03 14:10:01,566 DEBUG    copying supp file value_add_subject_crossref_current_2019-21.png
+2021-09-03 14:10:01,566 DEBUG    copying supp file value_add_subject_crossref_current_2019-21.html
+2021-09-03 14:10:01,571 DEBUG    copying supp file value_add_2020_only.png
+2021-09-03 14:10:01,571 DEBUG    copying supp file value_add_2020_only.html
+2021-09-03 14:10:01,578 DEBUG    copying supp file value_add_subject_2020_only.png
+2021-09-03 14:10:01,578 DEBUG    copying supp file value_add_subject_2020_only.html
+2021-09-03 14:10:01,583 DEBUG    copying supp file summary_doi_metadata_coverage.json
+2021-09-03 14:10:01,583 DEBUG    copying supp file summary_value_add_table.html
+2021-09-03 14:10:01,587 DEBUG    copying supp file abstracts_by_cr_type.png
+2021-09-03 14:10:01,588 DEBUG    copying supp file abstracts_by_cr_type.html
+2021-09-03 14:10:01,592 DEBUG    copying supp file affiliations_by_cr_type.png
+2021-09-03 14:10:01,592 DEBUG    copying supp file affiliations_by_cr_type.html
+2021-09-03 14:10:01,597 DEBUG    copying supp file citations_to_by_cr_type.png
+2021-09-03 14:10:01,597 DEBUG    copying supp file citations_to_by_cr_type.html
+2021-09-03 14:10:01,601 DEBUG    copying supp file references_from_by_cr_type.png
+2021-09-03 14:10:01,602 DEBUG    copying supp file references_from_by_cr_type.html
+2021-09-03 14:10:01,606 DEBUG    copying supp file subjects_by_cr_type.png
+2021-09-03 14:10:01,607 DEBUG    copying supp file subjects_by_cr_type.html
+2021-09-03 14:10:01,611 DEBUG    copying supp file summary_doi_metadata_coverage_by_type_alltime.json
+2021-09-03 14:10:01,611 DEBUG    copying supp file summary_doi_metadata_coverage_by_type_2020.json
+2021-09-03 14:10:01,612 DEBUG    copying supp file summary_doi_metadata_coverage_by_type_current.json
+2021-09-03 14:10:01,612 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:10:01,613 DEBUG    copying supp file alluvial_all_time.png
+2021-09-03 14:10:01,614 DEBUG    copying supp file alluvial_all_time.html
+2021-09-03 14:10:01,618 DEBUG    copying supp file alluvial_current.png
+2021-09-03 14:10:01,619 DEBUG    copying supp file alluvial_current.html
+2021-09-03 14:10:01,623 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:10:01,623 DEBUG    copying supp file mag_coverage_by_crossref_type.png
+2021-09-03 14:10:01,624 DEBUG    copying supp file mag_coverage_by_crossref_type.html
+2021-09-03 14:10:01,628 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:10:01,629 DEBUG    copying supp file overall_coverage.png
+2021-09-03 14:10:01,629 DEBUG    copying supp file overall_coverage.html
+2021-09-03 14:10:01,634 DEBUG    copying supp file 2020_coverage.png
+2021-09-03 14:10:01,635 DEBUG    copying supp file current_coverage.png
+2021-09-03 14:10:01,635 DEBUG    copying supp file current_coverage.html
+2021-09-03 14:10:01,639 DEBUG    copying supp file metadata.pkl
+2021-09-03 14:10:01,640 DEBUG    copying supp file cr_in_mag_barline.png
+2021-09-03 14:10:01,640 DEBUG    copying supp file cr_in_mag_barline.html
+2021-09-03 14:10:01,645 DEBUG  copying output to local output directory output_files
+2021-09-03 14:10:01,645 DEBUG    removing old output_files
+2021-09-03 14:10:01,657 DEBUG    copying files to output_files
