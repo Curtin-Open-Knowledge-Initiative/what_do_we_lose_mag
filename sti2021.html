@@ -10,32 +10,13 @@
 
 <div class="reveal">
     <div class="slides">
-        <section>
-            <section class="titleslide" data-background="static_assets/background-title.png">
-                <div vertical-align="middle">
-                    <h1>What do we lose when MAG goes away?</h1>
-                    <h2>What we have, what we need,<br>and how to maintain it?</h2>
-                </div>
-            </section>
-            <section class="twocolumn" data-background="static_assets/background-general.png">
-                <div class="leftside">
-                    <h1>Colophon</h1>
-                </div>
-                <div class="rightside">
-                    <ul>
-                        <li>Code and data on Github: <a href="https://github.com/Curtin-Open-Knowledge-Initiative/what_do_we_lose_mag">https://github.com/Curtin-Open-Knowledge-Initiative/what_do_we_lose_mag</a></li>
-                        <li>Presentation on Github: <a href="https://curtin-open-knowledge-initiative.github.io/what_do_we_lose_mag/index.html">https://curtin-open-knowledge-initiative.github.io/what_do_we_lose_mag</a></li>
-                    </ul>
-                    <p>
-                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-                        <img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a>
-                        <br />
-                        Copyright Cameron Neylon and Bianca Kramer 2021. This slide deck is licensed under a
-                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
-                    Code is available under an Apache v2.0 license at Github.
-                    </p>
-                </div>
-            </section>
+        <section class="titleslide" data-background="static_assets/background-title.png">
+            <div vertical-align="middle">
+                <h1>What do we lose with Microsoft Academic?</h1>
+                <h2>What we have, what we need, and how to maintain it?</h2>
+                <br>
+                <h3>Bianca Kramer & Cameron Neylon - STI2021</h3>
+            </div>
         </section>
         <section class="sectiondivider" data-background="static_assets/background-section.png">
             <h1>What is the issue here?</h1>
@@ -76,18 +57,9 @@
                             want to reach beyond the core of the academic record (e.g. beyond DOIs)
                         </p>
                     </li>
-                </ul>
-            </div>
-        </section>
-        <section class="twocolumn" data-background="static_assets/background-general.png">
-            <div class="leftside">
-                <h1>Good News and Bad News</h1>
-            </div>
-            <div class="rightside">
-                <ul>
                     <li>
                         <p>
-                        Efforts to replace MAG largely focus on inferring or scraping metadata and
+                            Efforts to replace MAG largely focus on inferring or scraping metadata and
                         are therefore dependent on access to semi-structured metadata or full text
                         <p>
                     </li>
@@ -98,14 +70,6 @@
                             is a complementary strategy route towards a rich open metadata environment
                         </p>
                     </li>
-                    <li>
-                        <p>
-                            We believe services seeking to replace MAG should demonstrate commitment to
-                            the <a href="https://openscholarlyinfrastructure.org/">Principles of Open Scholarly Infrastructure (POSI)/</a>
-                            to ensure transparency, community governance and an insurance plan for long term availability
-                        </p>
-                    </li>
-
                 </ul>
             </div>
         </section>
@@ -116,11 +80,13 @@
             <h1>...how would we know?</h1>
         </section>
         <section class="bigblacktext" data-background="static_assets/background-general.png">
-            <h1>...and what content do we have (or not) ?</h1>
+            <h1>...and what content do we have <br>(or not) ?</h1>
         </section>
         <section class="sectiondivider" data-background="static_assets/background-section.png">
             <h1>A quick segue on the data</h1>
             <h2>The Curtin Open Knowledge Initiative</h2>
+            <br>
+            <h2>@COKIProject - http://openknowledge.community</h2>
         </section>
         <section class="pullquoteorange" data-background="static_assets/background-title.png">
             <p>
@@ -163,7 +129,6 @@ com/embed/reporting/0b057fb6-5e07-4643-92b5-6a25138fce6d/page/Bq6OB" frameborder
                 <p>Data is derived from the following sources</p>
                 <ul>
                     <li>Crossref - weekly dump via Metadata Plus program</li>
-                    <li>Unpaywall - Open Access Status data via open data dump (October 2020)</li>
                     <li><em>Microsoft Academic - Affiliation and authorship data via biweekly dump</em></li>
                     <li>GRID - Information on organisations via regular data dump</li>
                 </ul>
@@ -181,7 +146,7 @@ com/embed/reporting/0b057fb6-5e07-4643-92b5-6a25138fce6d/page/Bq6OB" frameborder
                 </p>
                 <p>
                     Code for the analysis, including the queries and processing and a local copy
-                    of the derived data are available at the <a href="https://github.com/Curtin-Open-Knowledge-Initiative/what_do_we_lose_mag">presentation Github repository</a>>.
+                    of the derived data are available at the <a href="https://github.com/Curtin-Open-Knowledge-Initiative/what_do_we_lose_mag">presentation Github repository</a>.
                 </p>
             </div>
         </section>
@@ -205,7 +170,7 @@ com/embed/reporting/0b057fb6-5e07-4643-92b5-6a25138fce6d/page/Bq6OB" frameborder
                             </ul>
                         </li>
                         <li><p>Split by publication type, year of publication</p></li>
-                        <li><p>all time and for Crossref "current" (2019-21)</p></li>
+                        <li><p>All time and for Crossref "current" (2019-21)</p></li>
                         <li><p>This analysis uses data snapshots from 18 July 2021</p></li>
                     </ul>
                 </div>
@@ -216,14 +181,6 @@ com/embed/reporting/0b057fb6-5e07-4643-92b5-6a25138fce6d/page/Bq6OB" frameborder
                 </div>
                 <div class="rightside">
                     <iframe data-src="output_files/overall_coverage.html"></iframe>
-                </div>
-        </section>
-        <section class="twocolumn" data-background="static_assets/background-general.png">
-                <div class="leftside">
-                    <h1>MAG vs Crossref Coverage (Current)</h1>
-                </div>
-                <div class="rightside">
-                    <iframe data-src="output_files/current_coverage.html"></iframe>
                 </div>
         </section>
         <section class="twocolumn" data-background="static_assets/background-general.png">
@@ -242,15 +199,6 @@ com/embed/reporting/0b057fb6-5e07-4643-92b5-6a25138fce6d/page/Bq6OB" frameborder
                     <iframe data-src="output_files/mag_coverage_by_crossref_type.html"></iframe>
                 </div>
         </section>
-        <section class="twocolumn"
-                 data-background="static_assets/background-general.png">
-            <div class="leftside">
-                <h1>Crossref records: publication types in Crossref and MAG</h1>
-            </div>
-            <div class="rightside">
-                <iframe data-src="output_files/alluvial_all_time.html"></iframe>
-            </div>
-        </section>
         <section class="twocolumn" data-background="static_assets/background-general.png">
             <div class="leftside">
                 <h1>Crossref Records: MAG Added Value</h1>
@@ -265,14 +213,6 @@ com/embed/reporting/0b057fb6-5e07-4643-92b5-6a25138fce6d/page/Bq6OB" frameborder
             </div>
             <div class="rightside">
                 <iframe data-src="output_files/value_add_crossref_current_2019-21.html"></iframe>
-            </div>
-        </section>
-        <section class="twocolumn" data-background="static_assets/background-general.png">
-            <div class="leftside">
-                <h1>Crossref Records: MAG Added Value (Subjects)</h1>
-            </div>
-            <div class="rightside">
-                <iframe data-src="output_files/value_add_subject_all_time.html"></iframe>
             </div>
         </section>
         <section class="twocolumn" data-background="static_assets/background-general.png">
@@ -305,14 +245,6 @@ com/embed/reporting/0b057fb6-5e07-4643-92b5-6a25138fce6d/page/Bq6OB" frameborder
                 </div>
                 <div class="rightside">
                     <iframe data-src="output_files/references_from_by_cr_type.html"></iframe>
-                </div>
-        </section>
-        <section class="twocolumn" data-background="static_assets/background-general.png">
-                <div class="leftside">
-                    <h1>MAG Added Value by Crossref Type - Subjects</h1>
-                </div>
-                <div class="rightside">
-                    <iframe data-src="output_files/subjects_by_cr_type.html"></iframe>
                 </div>
         </section>
         <section class="sectiondivider" data-background="static_assets/background-section.png">
@@ -348,43 +280,6 @@ com/embed/reporting/0b057fb6-5e07-4643-92b5-6a25138fce6d/page/Bq6OB" frameborder
                 <div class="rightside">
                     <img src="static_assets/MAG_not_CR_table1.png"></img>
                 </div>
-        </section>
-        <section class="twocolumn" data-background="static_assets/background-general.png">
-                <div class="leftside">
-                    <h1>Coverage of non-DOIs in MAG</h1>
-                </div>
-                <div class="rightside">
-                    <img src="static_assets/MAG_not_CR_table2.png"></img>
-                </div>
-        </section>
-        </section>
-        <section class="sectiondivider" data-background="static_assets/background-section.png">
-            <h1>Open questions</h1>
-        </section>
-        <section class="twocolumn" data-background="static_assets/background-general.png">
-            <div class="leftside">
-                <h1>Open questions</h1>
-            </div>
-            <div class="rightside">
-                <ul>
-                    <li>
-                        <p>What biases exist in metadata coverage across e.g. languages, (types of) publishers ?
-                    </li>
-                    <li>
-                        <p>What is the role of metadata provision vs extraction of full-text?</p>
-                    </li>
-                    <li>
-                        <p>Are publishers the authoritative source for all publication metadata ? </p>
-                    </li>
-                    <li>
-                        <p>What is needed to safeguard transparent data collection, provenance and sustainability ? </p>
-                    </li>
-                    <li>
-                        <p>How can we (as a community) not only replace MAG, but do better ? </p>
-                    </li>
-
-                </ul>
-            </div>
         </section>
         <section class="sectiondivider" data-background="static_assets/background-section.png">
             <h1>Conclusions</h1>
@@ -429,61 +324,26 @@ com/embed/reporting/0b057fb6-5e07-4643-92b5-6a25138fce6d/page/Bq6OB" frameborder
             </div>
         </section>
         <section class="bigblacktext" data-background="static_assets/background-general.png">
-            <h1>Tackle the problem from both ends...</h1>
+            <h1>To safeguard transparent data collection, provenance and sustainability ...</h1>
         </section>
         <section class="bigblacktext" data-background="static_assets/background-general.png">
-            <h1>...meet in the middle for a rich metadata future</h1>
+            <h1>...we believe services seeking to replace MAG should demonstrate commitment to ...</h1>
         </section>
-        <section class="twocolumn" data-background="static_assets/background-general.png">
-            <div class="leftside">
-                <h1>COKI Team</h1>
-            </div>
-            <div class="rightside">
-                <div style="width:45%;float:left">
-                    <p><strong>Centre for Culture and Technology</strong></p>
-                    <ul>
-                        <li>Cameron Neylon</li>
-                        <li>Lucy Montgomery</li>
-                        <li>Katie Wilson</li>
-                        <li>Chun-Kai (Karl) Huang</li>
-                        <li>Chloe-Brookes Kenworthy</li>
-                        <li>Tim Winkler</li>
-                    </ul>
-                    <p><strong>Funding from</strong></p>
-                    <ul>
-                        <li>Research Office at Curtin</li>
-                        <li>Faculty of Humanities</li>
-                        <li>School of Media, Creative Arts and Social Enquiry</li>
-                        <li>Andrew W. Mellon Foundation</li>
-                        <li>Arcadia</li>
-                    </ul>
-                </div>
-                <div style="width:45%;float:right">
-                    <p><strong>Curtin Institute for Computation</strong></p>
-                    <ul>
-                        <li>Richard Hosking</li>
-                        <li>Rebecca Handcock</li>
-                        <li>Aniek Roelofs</li>
-                        <li>Jamie Diprose</li>
-                        <li>Tuan Chien</li>
-                    </ul>
-                    <p><strong>Educopia Foundation</strong></p>
-                    <ul>
-                        <li>Katherine Skinner</li>
-                        <li>Rebecca Meyerson</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-        <section class="sectiondivider" data-background="static_assets/background-section.png">
-            <h1> </h1>
-            <h2>@COKIProject - @cameronneylon</h2>
-            <h2>http://openknowledge.community
+        <section class="bigblacktext" data-background="static_assets/background-general.png">
+            <h1>... the Principles of Open Scholarly Infrastructure (POSI)</h1>
+            <div><h2>
                 <ul>
-                    <li>Subscribe to the COKI Newsletter</li>
-                    <li>View the public dashboards</li>
-                </ul>
-            </h2>
+                    <li>
+                        <p>transparency</p>
+                    </li>
+                    <li>
+                        <p>community governance</p>
+                    </li>
+                    <li>
+                        <p>insurance plan for long-term availability</p>
+                    </li>
+                </ul></h2>
+            </div>
         </section>
         <section class="twocolumn" data-background="static_assets/background-general.png">
                 <div class="leftside">
@@ -491,8 +351,8 @@ com/embed/reporting/0b057fb6-5e07-4643-92b5-6a25138fce6d/page/Bq6OB" frameborder
                 </div>
                 <div class="rightside">
                     <ul>
-                        <li>Code and data on Github: <a href="https://github.com/Curtin-Open-Knowledge-Initiative/what_do_we_lose_mag">https://github.com/Curtin-Open-Knowledge-Initiative/what_do_we_lose_mag</a></li>
-                        <li>Presentation on Github: <a href="https://curtin-open-knowledge-initiative.github.io/what_do_we_lose_mag/index.html">https://curtin-open-knowledge-initiative.github.io/what_do_we_lose_mag</a></li>
+                        <li>Code, data and slides on Github: <a href="https://github.com/Curtin-Open-Knowledge-Initiative/what_do_we_lose_mag/tree/sti2021">https://github.com/Curtin-Open-Knowledge-Initiative/what_do_we_lose_mag</a></li>
+                        <li>PDF slides generated with: <a href="https://github.com/astefanutti/decktape">https://github.com/astefanutti/decktape</a></li>
                     </ul>
                     <p>
                     <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
@@ -504,7 +364,6 @@ com/embed/reporting/0b057fb6-5e07-4643-92b5-6a25138fce6d/page/Bq6OB" frameborder
                     </p>
                 </div>
             </section>
-
     </div>
 </div>
 
